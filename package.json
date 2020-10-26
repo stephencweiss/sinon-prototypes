@@ -1,0 +1,11 @@
+{
+  "name": "sinon-prototype",
+  "version": "0.0.1",
+  "main": "index.js",
+  "author": "Stephen Weiss <stephen.c.weiss@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "jest": "^26.6.1",
+    "sinon": "^9.2.0"
+  }
+}
