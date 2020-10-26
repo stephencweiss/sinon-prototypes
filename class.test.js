@@ -11,18 +11,18 @@ class TestClass {
 }
 
 describe("the test class", () => {
-  beforeEach(() => {
-    sinon
+  test("testClass instance can be stubbed", () => {
+    const instanceStub = sinon
       .stub(TestClass.prototype, "instanceMethod")
       .callsFake(function foo() {
         return "baz";
       });
+    expect(instanceStub()).toBe("baz");
   });
-  afterEach(() => {
-    sinon.reset();
-  });
-  test("testClass instance can be stubbed", () => {
-    const testClass = new TestClass()
-    expect(testClass.instanceMethod()).toBe("baz");
-  });
+
+  test("testClass static method can be stubbed", () => {
+    const staticStub = sinon.stub(TestClass, "staticMethod").callsFake(() => 'foobar')
+    expect(staticStub()).toBe('foobar')
+    staticStub.reset()
+  })
 });
