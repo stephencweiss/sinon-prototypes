@@ -1,14 +1,5 @@
-// const TestClass = require("./class");
+const TestClass = require("./class");
 const sinon = require("sinon");
-
-class TestClass {
-  static staticMethod() {
-    return "foo";
-  }
-  instanceMethod() {
-    return "bar";
-  }
-}
 
 describe("the test class", () => {
   test("testClass instance can be stubbed", () => {

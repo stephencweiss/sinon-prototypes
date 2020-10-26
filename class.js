@@ -1,4 +1,4 @@
-class TestClass {
+export default class TestClass {
   static staticMethod() {
     return "foo";
   }
@@ -7,4 +7,4 @@ class TestClass {
   }
 }
 
-module.exports = {TestClass}
+module.exports = TestClass;
